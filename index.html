@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Michał Łukasik</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/f8b616e1b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body x-data="{ openMenu: false }">
+    <div class="menu-selector" x-on:click="openMenu = !openMenu">
+        <i x-show="!openMenu" class="fa-solid fa-bars"></i>
+        <i x-show="openMenu" class="fa-solid fa-bars"></i>
+    </div>
+    <div class="main-menu" x-show="openMenu">
+        <div x-on:click="openMenu = false"><a href="#about_me">About me</a></div>
+        <div>Projects</div>
+        <div>Resume</div>
+    </div>
+    <div class="page" id="about_me">
+        <img src="images/main.svg">
+        <div class="name">
+            <div class="elevated-1">Łukasik</div>
+            <div class="elevated-2 divider">Michał</div>
+            <div class="elevated-3" style="padding-top: 1rem;">Software Developer</div>
+        </div>
+        <img src="images/main.svg">
+        <span id="scrolldown">scrolldown</span>
+    </div>
+    <div class="page">
+        <div style="font-weight: 100">random text</div>
+        <div style="font-weight: 200">random text</div>
+        <div style="font-weight: 300">random text</div>
+        <div style="font-weight: 400">random text</div>
+        <div style="font-weight: 500">random text</div>
+        <div style="font-weight: 600">random text</div>
+        <div style="font-weight: 700">random text</div>
+        <div style="font-weight: 800">random text</div>
+        <div style="font-weight: 900">random text</div>
+    </div>
+    <div class="page">
+        <div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim interdum nulla, et tristique
+                nisl
+                efficitur non. Suspendisse consectetur malesuada massa, tincidunt convallis dolor sodales eget. Cras
+                dignissim, arcu non pharetra gravida, risus sem sodales velit, sit amet finibus mauris erat at eros.
+                Curabitur feugiat accumsan elit non ultrices. Curabitur ullamcorper, erat sit amet congue hendrerit, mi
+                enim
+                facilisis massa, at posuere sapien libero id neque. Maecenas ac euismod sem. Etiam vehicula massa ac
+                enim
+                volutpat, non sodales leo finibus.
+            </div>
+            <div>Fusce bibendum, massa ut volutpat varius, diam dolor porttitor erat, id volutpat leo nulla nec nulla.
+                Aliquam a erat lobortis, malesuada nisi nec, tincidunt tortor. Duis pellentesque magna a neque tempus
+                sodales. Integer viverra velit elit, non tempus purus faucibus sed. Integer convallis accumsan odio,
+                quis
+                dapibus lectus eleifend vitae. Pellentesque eu metus malesuada, ornare magna eu, tincidunt ipsum. Nam
+                aliquam diam tincidunt, porta diam vitae, ornare est. In vel risus tellus. Nulla eget dignissim metus.
+                Ut
+                suscipit massa sed enim venenatis, faucibus molestie orci elementum. Integer pulvinar urna ut bibendum
+                varius. Aenean ut mi maximus, imperdiet eros sed, vulputate urna. Nullam condimentum arcu in pharetra
+                efficitur. Nullam ut sem nulla.
+            </div>
+            </br>
+            <div>Maecenas ullamcorper purus vel egestas finibus. Etiam pretium luctus eros, quis gravida nulla finibus
+                vitae. Fusce ac justo molestie, cursus augue eu, facilisis nibh. Etiam lacinia velit a aliquet
+                pellentesque.
+                Nulla id justo mollis, dignissim lacus a, cursus metus. Nullam euismod dignissim ex, eget tincidunt
+                ipsum
+                molestie vitae. Sed nec tristique orci.
+            </div>
+            </br>
+            <div>Pellentesque pharetra massa a libero hendrerit, nec laoreet urna sagittis. Vivamus volutpat lobortis
+                congue. Nullam efficitur orci ac diam porta posuere. Nunc elit enim, commodo sit amet efficitur at,
+                cursus a
+                tortor. Quisque consectetur lacus et tellus scelerisque, nec interdum justo mattis. Maecenas finibus,
+                lectus
+                nec feugiat congue, magna velit interdum neque, non semper lectus augue id arcu. Donec commodo dolor
+                tellus,
+                nec ornare nisi dapibus et.
+            </div>
+            </br>
+            <div>In commodo blandit purus nec accumsan. Sed scelerisque tortor eu nunc elementum lacinia. Cras in turpis
+                non
+                velit feugiat pretium. Nunc nec lorem non elit laoreet mattis vitae quis turpis. Nam at nisi eleifend,
+                auctor velit vitae, rhoncus odio. Nam rutrum erat ex, fermentum mollis velit aliquet eget. Curabitur
+                pharetra hendrerit metus in egestas. Praesent eget malesuada felis. Ut viverra urna elit, et elementum
+                dolor
+                ornare at.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "app-font-family";
+    src: url("fonts/GeistVariableVF.ttf");
+}
+
+html {
+    font-size: 20px;
+    color: #ded6ca;
+    font-family: app-font-family;
+    font-weight: 200;
+}
+
+body {
+    background-image: url("images/background.svg");
+    background-size: 900px;
+    background-color: #1e201e;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit; 
+}
+
+.menu-selector {
+    height: 2rem;
+    width: 2rem;
+    background-color: #000000;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 25%;
+    position: fixed;
+    z-index: 10;
+    right: 10px;
+    top: 5px;
+}
+
+.menu-selector:hover {
+    cursor: pointer;
+    color: #569955;
+}
+
+.main-menu {
+    background-color: #000000;
+    border-bottom: 1px solid #ded6ca88;
+    color: #ded6ca;
+    gap: 25px;
+    width: 100%;
+    height: calc(2rem + 6px);
+    line-height: calc(2rem + 6px);
+    justify-content: center;
+    box-sizing: border-box;
+    font-weight: 400;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    top: 0;
+}
+
+.main-menu>div:hover {
+    cursor: pointer;
+    color: #569955;
+}
+
+.page {
+    height: 100vh;
+    padding: 2rem;
+
+}
+
+.elevated {
+        color: #569955;
+}
+
+.elevated-1 {
+    font-weight: 600;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.elevated-2 {
+    color: #569955;
+    font-weight: 600;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.elevated-3 {
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+#about_me {
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+#about_me > .name {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw
+}
+
+#about_me > .name > div {
+    align-self: baseline;
+}
+
+#about_me > .name > .divider {
+    border-bottom: 1px solid #569955;
+}
+
+#about_me > img {
+    position: absolute;
+    max-height: 90vh;
+    max-width: 90%;
+    right: 2vh;
+    top: 2vh;
+}
+
+#about_me > #scrolldown {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    text-transform: uppercase;
+    color: #569955;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transform-origin: right;
+    transform: translateX(-100%) rotate(90deg);
+    border-bottom: 1px solid #569955;
+    padding-right: 1rem;
+}
