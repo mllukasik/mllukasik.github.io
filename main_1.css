@@ -5,7 +5,7 @@
 
 html {
     font-size: 20px;
-    color: #ded6ca;
+    color: #ffffff;
     font-family: app-font-family;
     font-weight: 200;
     scroll-behavior: smooth;
@@ -66,11 +66,11 @@ a {
 
 .main-menu.scrolled {
     background-color: #000000dd;
-    border-bottom: 1px solid #ded6ca88;
+    border-bottom: 1px solid #ffffff88;
 }
 
 .main-menu>div:hover {
-    color: #ded6ca;
+    color: #ffffff;
     cursor: pointer;
     font-weight: 600;
 }
@@ -242,7 +242,7 @@ a {
 .contact_icon {
     width: 5rem;
     height: 5rem;
-    background-color: #ded6ca;
+    background-color: #ffffff;
     color: #1e201e;
     font-size: 3rem;
     line-height: 5rem;
