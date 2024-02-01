@@ -268,7 +268,7 @@ a {
     #scrolldown {
         position: fixed;
         left: 2rem;
-        bottom: 0;
+        bottom: -1vh;
     }
 
     .main-menu {
@@ -286,6 +286,11 @@ a {
 
     #projects {
         padding: 2rem 0;
+    }
+
+    #about_me>.page_body>.name {
+        justify-content: unset;
+        margin-top: 25%;
     }
 
     #contact>.page_body {
