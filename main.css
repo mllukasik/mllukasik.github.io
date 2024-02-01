@@ -8,6 +8,7 @@ html {
     color: #ded6ca;
     font-family: app-font-family;
     font-weight: 200;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -18,59 +19,76 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+}
+
 a {
     color: inherit;
-    text-decoration: inherit; 
+    text-decoration: inherit;
 }
 
 .menu-selector {
     height: 2rem;
     width: 2rem;
-    background-color: #000000;
     text-align: center;
     line-height: 2rem;
     border-radius: 25%;
     position: fixed;
     z-index: 10;
     right: 10px;
-    top: 5px;
 }
 
 .menu-selector:hover {
-    cursor: pointer;
     color: #569955;
+    cursor: pointer;
 }
 
 .main-menu {
-    background-color: #000000;
-    border-bottom: 1px solid #ded6ca88;
-    color: #ded6ca;
+    color: #569955;
     gap: 25px;
     width: 100%;
     height: calc(2rem + 6px);
     line-height: calc(2rem + 6px);
-    justify-content: center;
+    justify-content: right;
     box-sizing: border-box;
-    font-weight: 400;
+    font-weight: 500;
     position: fixed;
     z-index: 5;
     display: flex;
     top: 0;
+    padding: 0 10px;
+}
+
+.main-menu.scrolled {
+    background-color: #000000dd;
+    border-bottom: 1px solid #ded6ca88;
 }
 
 .main-menu>div:hover {
+    color: #ded6ca;
     cursor: pointer;
-    color: #569955;
+    font-weight: 600;
 }
 
 .page {
-    height: 100vh;
+    min-height: 96vh;
     padding: 2rem;
 
 }
 
+.page_body {
+    height: 100%;
+    width: 100%;
+}
+
 .elevated {
-        color: #569955;
+    color: #569955;
+    font-weight: 400;
 }
 
 .elevated-1 {
@@ -92,12 +110,16 @@ a {
 }
 
 #about_me {
+    height: 96vh;
+}
+
+#about_me>.page_body {
     position: relative;
     box-sizing: border-box;
 
 }
 
-#about_me > .name {
+#about_me>.page_body>.name {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -105,32 +127,187 @@ a {
     margin-left: 5vw
 }
 
-#about_me > .name > div {
+#about_me>.page_body>.name>div {
     align-self: baseline;
 }
 
-#about_me > .name > .divider {
+#about_me>.page_body>.name>.divider {
     border-bottom: 1px solid #569955;
 }
 
-#about_me > img {
+#about_me>.page_body>img {
     position: absolute;
-    max-height: 90vh;
+    max-height: 85vh;
     max-width: 90%;
     right: 2vh;
-    top: 2vh;
+    top: 7.5vh;
 }
 
-#about_me > #scrolldown {
-    position: absolute;
+#scrolldown {
+    position: fixed;
     left: 2rem;
     bottom: 2rem;
-    text-transform: uppercase;
-    color: #569955;
-    font-size: 0.75rem;
-    font-weight: 600;
     transform-origin: right;
     transform: translateX(-100%) rotate(90deg);
+}
+
+#scrolldown>span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #569955;
     border-bottom: 1px solid #569955;
     padding-right: 1rem;
+}
+
+.footer {
+    border-top: dotted 2px #56995588;
+    padding: 1rem;
+    background: black;
+    font-size: 0.7rem;
+    font-weight: 100;
+    gap: 50px;
+    display: flex;
+}
+
+
+#projects>.page_body>div {
+    display: flex;
+    gap: 50px;
+}
+
+
+.project_view {
+    border-radius: 5px;
+    box-shadow: #000000 5px 5px 20px;
+    padding: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project_view>img {
+    width: 90%;
+    align-self: center;
+}
+
+.btn-a {
+    padding: 5px 10px;
+    background-color: #569955;
+    color: black;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.page_divider {
+    border: dotted 1px #56995588;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.project_view>.links {
+    color: #569955;
+    display: flex;
+    gap: 15px;
+    justify-content: right;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.links>i {
+    cursor: pointer;
+}
+
+#contact {
+    min-height: unset;
+}
+
+#contact>.page_body {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 15%;
+    box-sizing: border-box;
+}
+
+.contact_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact_icon {
+    width: 5rem;
+    height: 5rem;
+    background-color: #ded6ca;
+    color: #1e201e;
+    font-size: 3rem;
+    line-height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: #000000 5px 5px 50px;
+}
+
+.contact_label {
+    color: #569955;
+    font-weight: 600;
+}
+
+.contact_value {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        background-size: 500px;
+    }
+
+    .main-menu {
+        background-color: #000000dd;
+        flex-direction: column;
+        height: 100vh;
+        padding-top: 20vh;
+        padding-bottom: 30vh;
+        align-items: center;
+    }
+
+    #about_me>.page_body>img {
+        display: none;
+    }
+
+    #projects {
+        padding: 2rem 0;
+    }
+
+    #contact>.page_body {
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #projects>.page_body>div {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .project_view {
+        width: 80vw;
+
+    }
+
+    .elevated-1 {
+        font-size: 3rem;
+    }
+
+    .elevated-2 {
+        font-size: 2.5rem;
+    }
+
+    .elevated-3 {
+        font-size: 1.25rem;
+    }
 }
