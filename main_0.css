@@ -268,7 +268,7 @@ a {
     #scrolldown {
         position: fixed;
         left: 2rem;
-        bottom: -1vh;
+        bottom: 0vh;
     }
 
     .main-menu {
@@ -290,7 +290,7 @@ a {
 
     #about_me>.page_body>.name {
         justify-content: unset;
-        margin-top: 10%;
+        margin-top: 50%;
     }
 
     #contact>.page_body {

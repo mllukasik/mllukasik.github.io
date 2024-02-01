@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <title>Michał Łukasik</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main_0.css'>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/f8b616e1b5.js" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
 </head>
 
 <body x-data="{ openMenu: window.innerWidth > 750}">
-    <span id="scrolldown"><span x-show="$store.scroll.valueY < 500" x-transition.duration.300ms>scrolldown</span></span>
+    <span id="scrolldown"><span x-show="$store.scroll.valueY < (window.innerHeight * 0.2) " x-transition.duration.300ms>scrolldown</span></span>
     <div class="menu-selector hover:xx" x-on:click="openMenu = !openMenu">
         <i x-show="!openMenu" class="fa-solid fa-bars"></i>
         <i x-show="openMenu" class="fa-solid fa-bars"></i>
