@@ -12,7 +12,7 @@
     <script src="main.js"></script>
 </head>
 
-<body x-data="{ openMenu: true}">
+<body x-data="{ openMenu: window.innerWidth > 750}">
     <span id="scrolldown"><span x-show="$store.scroll.valueY < 500" x-transition.duration.300ms>scrolldown</span></span>
     <div class="menu-selector hover:xx" x-on:click="openMenu = !openMenu">
         <i x-show="!openMenu" class="fa-solid fa-bars"></i>

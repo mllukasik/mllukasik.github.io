@@ -265,6 +265,12 @@ a {
         background-size: 500px;
     }
 
+    #scrolldown {
+        position: fixed;
+        left: 2rem;
+        bottom: 0;
+    }
+
     .main-menu {
         background-color: #000000dd;
         flex-direction: column;
