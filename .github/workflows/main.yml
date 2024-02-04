@@ -3,6 +3,7 @@ name: Generate sources and publish to github pages
 on:
   push:
     branches: [$default-branch]
+  workflow_dispatch:
 
 permissions:
   contents: read
