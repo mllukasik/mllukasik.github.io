@@ -245,10 +245,13 @@ a {
     background-color: #ffffff;
     color: #1e201e;
     font-size: 3rem;
-    line-height: 5rem;
     text-align: center;
     border-radius: 50%;
     box-shadow: #000000 5px 5px 50px;
+}
+
+.contact_icon > i {
+    line-height: 5rem;
 }
 
 .contact_label {
@@ -258,6 +261,15 @@ a {
 
 .contact_value {
     font-style: italic;
+}
+
+div.project_view h1 {
+    font-size: 1rem;
+}
+
+div.project_view a {
+    color: #569955;
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 750px) {
