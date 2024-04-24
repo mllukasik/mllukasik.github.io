@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build output
-        uses: mlukasik/bobo-generator@main
+        uses: mllukasik/bobo-generator@main
         with:
           workspace: mllukasik
           skipPagesGeneration: true
