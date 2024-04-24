@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <title>Michał Łukasik</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main_2.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/f8b616e1b5.js" crossorigin="anonymous"></script>
@@ -16,8 +16,7 @@
     <span id="scrolldown"><span x-show="$store.scroll.valueY < (window.innerHeight * 0.2) "
             x-transition.duration.300ms>scrolldown</span></span>
     <div class="menu-selector hover:xx" x-on:click="openMenu = !openMenu">
-        <i x-show="!openMenu" class="fa-solid fa-bars"></i>
-        <i x-show="openMenu" class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
     </div>
     <div class="main-menu" x-show="openMenu" :class="$store.scroll.valueY ? 'scrolled' : ''">
         <div style="order: 1; flex-grow: 1;"></div>
@@ -44,15 +43,32 @@
         <div class="page_body">
             <div>
                 <th:block th:each="project: ${projects}">
-                    <div class="project_view">
-                        <div style="cursor: pointer; font-size: 1.2rem; font-weight: 600;" class="elevated">
+                    <div class="project_view" x-data="{ selected: false}">
+                        <div style="cursor: pointer; font-size: 1.2rem; font-weight: 600;" x-on:click="selected = !selected" class="elevated">
                             <span th:utext="${project.name}">
                                 <h1>PROJECT NAME</h1>
                             </span>
                         </div>
-                        <th:block th:utext="${project.content}">
-                            <p>To jest text <a href="random_url">test</a></p>
-                        </th:block>
+                        <div :class="'project_content ' + (selected ? 'selected' : 'unselected')">
+                            <th:block th:utext="${project.content}">
+                                <p>To jest text <a href="random_url">test</a></p>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                                <div>texttexttext</div>
+                            </th:block>
+                        </div>
                         <span style="flex-grow: 1;"></span>
                         <div class="links">
                             <a href="http://github.com"><i class="fa-brands fa-github"></i></a>
@@ -73,12 +89,12 @@
                 <div class="contact_label">Email</div>
                 <div class="contact_value">michal.lukasik.contact@gmail.com</div>
             </a>
-            <a class="contact_link" href="https://github.com/rookiebyte/">
+            <a class="contact_link" href="https://github.com/mllukasik/">
                 <div class="contact_icon">
                     <i class="fa-brands fa-github"></i>
                 </div>
                 <div class="contact_label">GitHub</div>
-                <div class="contact_value">rookiebyte</div>
+                <div class="contact_value">mllukasik</div>
             </a>
             <a class="contact_link" href="https://www.linkedin.com/in/javamichallukasik/">
                 <div class="contact_icon">
