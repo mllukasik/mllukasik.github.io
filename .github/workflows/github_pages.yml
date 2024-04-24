@@ -25,7 +25,7 @@ jobs:
       - name: Build output
         uses: mllukasik/bobo-generator@main
         with:
-          workspace: mllukasik
+          workspace: src
           skipPagesGeneration: true
 
       - name: Setup Pages
