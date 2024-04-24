@@ -190,6 +190,15 @@ a {
     gap: 0.5rem;
 }
 
+.project_title {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .project_content.unselected {
     max-height: 200px;
     overflow: hidden;
