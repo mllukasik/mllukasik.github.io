@@ -1,9 +1,7 @@
 name: Generate sources and publish to github pages
 
 on:
-  push:
-    branches: [$default-branch]
-  workflow_dispatch:
+  workflow_dispatch
 
 permissions:
   contents: read
@@ -24,15 +22,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build output
-        uses: rookiebyte/portfolio-generator-action@main
+        uses: mlukasik/bobo-generator@main
         with:
-          username: mllukasik
+          workspace: mllukasik
+          skipPagesGeneration: true
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'output'
+          path: 'build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
