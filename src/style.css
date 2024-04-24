@@ -36,11 +36,14 @@ a {
     height: 2rem;
     width: 2rem;
     text-align: center;
-    line-height: 2rem;
     border-radius: 25%;
     position: fixed;
     z-index: 10;
     right: 10px;
+}
+
+.menu-selector>i {
+    line-height: 2rem;
 }
 
 .menu-selector:hover {
@@ -173,6 +176,7 @@ a {
 
 #projects>.page_body>div {
     display: flex;
+    flex-direction: column;
     gap: 50px;
 }
 
@@ -181,10 +185,23 @@ a {
     border-radius: 5px;
     box-shadow: #000000 5px 5px 20px;
     padding: 10px;
-    width: 400px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.project_title {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project_content.unselected {
+    max-height: 200px;
+    overflow: hidden;
 }
 
 .project_view>img {
@@ -250,7 +267,7 @@ a {
     box-shadow: #000000 5px 5px 50px;
 }
 
-.contact_icon > i {
+.contact_icon>i {
     line-height: 5rem;
 }
 
