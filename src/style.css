@@ -199,6 +199,10 @@ a {
     align-items: center;
 }
 
+.creation_data {
+    font-size: .75rem;
+}
+
 .project_content.unselected {
     max-height: 200px;
     overflow: hidden;
@@ -315,6 +319,14 @@ div.project_view a {
 
     #projects {
         padding: 2rem 0;
+    }
+
+    .project_title {
+        flex-direction: column;
+    }
+    
+    .creation_data {
+        font-size: .5rem;
     }
 
     #about_me>.page_body>.name {
