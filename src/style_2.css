@@ -9,6 +9,7 @@ html {
     font-family: app-font-family;
     font-weight: 200;
     scroll-behavior: smooth;
+    prefers-color-scheme: light !important;
 }
 
 body {
